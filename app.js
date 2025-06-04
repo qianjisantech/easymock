@@ -20,6 +20,8 @@ const routerConfig = require('./router-config')
 const app = module.exports = new Koa()
 const uploadConf = config.get('upload')
 const jwtSecret = config.get('jwt.secret')
+const mongoose = require('mongoose')
+mongoose.set('strictQuery', false)
 
 util.init()
 onerror(app)

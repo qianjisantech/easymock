@@ -12,9 +12,9 @@ const cache = LRU({ max: 1, maxAge: 1000 * 60 * 60 })
  */
 
 function getUseTotalCount (query = {}) {
-  return MockCount.aggregate(
+  return MockCount.aggregate([
     { $match: query },
-    { $group: { _id: null, total: { $sum: '$count' } } }
+    { $group: { _id: null, total: { $sum: '$count' } } }]
   ).then(data => data[0] ? /* istanbul ignore next */ data[0].total : 0)
 }
 

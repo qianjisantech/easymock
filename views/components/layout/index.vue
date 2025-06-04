@@ -53,16 +53,16 @@
             <template slot="title">
               <Icon type="egg"></Icon> {{$t('c.layout.menu[4][0]')}}
             </template>
-            <li
-              class="ivu-menu-item"
-              @click="open('https://github.com/easy-mock/easy-mock')">
-              <Icon type="link"></Icon> GitHub
-            </li>
-            <li
-              class="ivu-menu-item"
-              @click="open('https://github.com/easy-mock/easy-mock-cli')">
-              <Icon type="link"></Icon> {{$t('c.layout.menu[4][1]')}}
-            </li>
+<!--            <li-->
+<!--              class="ivu-menu-item"-->
+<!--              @click="open('https://github.com/easy-mock/easy-mock')">-->
+<!--              <Icon type="link"></Icon> GitHub-->
+<!--            </li>-->
+<!--            <li-->
+<!--              class="ivu-menu-item"-->
+<!--              @click="open('https://github.com/easy-mock/easy-mock-cli')">-->
+<!--              <Icon type="link"></Icon> {{$t('c.layout.menu[4][1]')}}-->
+<!--            </li>-->
             <li
               class="ivu-menu-item"
               @click="open('http://mockjs.com/examples.html')">
