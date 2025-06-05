@@ -1,5 +1,5 @@
 # 使用 Node.js 14 基础镜像（与 package.json 中的依赖兼容）
-FROM node:14-alpine AS builder
+FROM registry.cn-hangzhou.aliyuncs.com/library/node:18-alpine AS builder
 
 # 设置工作目录
 WORKDIR /app
@@ -18,7 +18,7 @@ COPY . .
 RUN npm run build || echo "Build completed with suppressed errors"
 # --------------------------------
 # 生产环境镜像
-FROM node:14-alpine
+FROM registry.cn-hangzhou.aliyuncs.com/library/node:18-alpine
 
 # 跳过 ESLint 检查
 ENV ESLINT_NO_DEV_ERRORS=true
